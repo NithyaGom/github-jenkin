@@ -18,14 +18,14 @@ pipeline {
                         }
                     }
                 }
-                stage('Test On Linux') {
+                stage('Test On nginx') {
                     agent {
                         docker { 
                         image 'nginx'
                         }
                     }
                     steps {
-                        sh 'echo "This is ubuntu image"'
+                        sh 'echo "This is nginx image"'
                     }
                     post {
                         success {
